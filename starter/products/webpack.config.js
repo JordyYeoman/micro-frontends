@@ -2,6 +2,9 @@ const path = require("path");
 
 module.exports = {
   mode: "development",
+  devServer: {
+    port: 8081,
+  },
   entry: {
     mylib: path.resolve(__dirname, "src/index.ts"),
   },
@@ -19,5 +22,5 @@ module.exports = {
     filename: "[name].js",
   },
   devtool: "source-map",
-  resolve: { extensions: [".ts"] },
+  resolve: { extensions: [".ts", ".js"] },
 };
